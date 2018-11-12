@@ -161,6 +161,16 @@
             Bundle 'tpope/vim-commentary'
             Bundle 'godlygeek/tabular'
             Bundle 'luochen1990/rainbow'
+            Bundle 'vim-scripts/a.vim'
+            Bundle 'derekwyatt/vim-fswitch'
+            Bundle 'derekwyatt/vim-protodef'
+            Bundle 'rhysd/vim-clang-format'
+            Bundle 'vim-scripts/grep.vim'
+            Bundle 'abudden/taghighlight-automirror'
+            Bundle 'octol/vim-cpp-enhanced-highlight'
+            Bundle 'w0rp/ale'
+            Bundle 'vim-scripts/bufexplorer.zip'
+
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
             endif
