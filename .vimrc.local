@@ -116,3 +116,4 @@ let g:airline_theme='molokai'
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
+noremap <C-b> MBEToggleAll!<CR>
