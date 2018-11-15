@@ -91,7 +91,11 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
+<<<<<<< 9d956c7203e9b5d9f4ac8801969641b43c71f34d
         let g:spf13_bundle_groups=['general', 'writing', 'neocomplete','youcompleteme', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+=======
+        let g:spf13_bundle_groups=['general', 'writing', 'youcompleteme', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+>>>>>>> office
     endif
 
     " To override all the included bundles, add the following to your
@@ -111,7 +115,6 @@
             Bundle 'jiangmiao/auto-pairs'
             Bundle 'ctrlpvim/ctrlp.vim'
             Bundle 'tacahiroy/ctrlp-funky'
-            Bundle 'fholgado/minibufexpl.vim'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
@@ -220,7 +223,10 @@
             Bundle 'python_match.vim'
             Bundle 'pythoncomplete'
             Bundle 'davidhalter/jedi-vim'
+<<<<<<< 9d956c7203e9b5d9f4ac8801969641b43c71f34d
             Bundle 'python-syntax'
+=======
+>>>>>>> office
         endif
     " }
 
@@ -259,6 +265,10 @@
 
     " HTML {
         if count(g:spf13_bundle_groups, 'html')
+<<<<<<< 9d956c7203e9b5d9f4ac8801969641b43c71f34d
+=======
+            "Bundle 'amirh/HTML-AutoCloseTag'
+>>>>>>> office
             Bundle 'hail2u/vim-css3-syntax'
             Bundle 'gorodinskiy/vim-coloresque'
             Bundle 'tpope/vim-haml'

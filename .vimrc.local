@@ -27,6 +27,8 @@ set completeopt-=preview
 
 
 
+"设置全局配置
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " 从第一个键入字符就开始罗列匹配项
 let g:ycm_min_num_of_chars_for_completion=1
 
@@ -42,6 +44,7 @@ let g:ycm_python_binary_path = '/usr/bin/python3.5'
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 " 只能是 #include 或已打开的文件
 nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
 nmap <Leader>q :q<CR>
 nmap <Leader>sh :sh
@@ -87,6 +90,7 @@ function! Make()
   endif
 endfunction
 
+nnoremap <F3> :Rgrep<cr>
 "vim
 let g:rainbow_conf = {
 \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
@@ -111,9 +115,48 @@ let g:rainbow_conf = {
 \	}
 \}
 
+"vim-cpp-enhanced-highlight
+let g:cpp_class_scope_hightlight = 1
+"Highlighting of class scope is disabled by default. To enable set
+let g:cpp_class_scope_highlight = 1
+
+"Highlighting of member variables is disabled by default. To enable set
+
+let g:cpp_member_variable_highlight = 1
+
+"Highlighting of class names in declarations is disabled by default. To enable set
+
+let g:cpp_class_decl_highlight = 1
+
+"There are two ways to highlight template functions. Either
+
+let g:cpp_experimental_simple_template_highlight = 1
+
+"which works in most cases, but can be a little slow on large files. Alternatively set
+
+let g:cpp_experimental_template_highlight = 1
+
+"Highlighting of library concepts is enabled by
+
+let g:cpp_concepts_highlight = 1
+
+"Highlighting of user defined functions can be disabled by
+
+let g:cpp_no_function_highlight = 0
+
+"TagHightLight settings
+
+noremap <F2> :UpdateTypesFileOnly<CR>
+
+noremap <leader>bs :BufExplorerHorizontalSplit<CR>
+noremap <leader>bv :BufExplorerVerticalSplit<CR>
+
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
-
-noremap <C-b> MBEToggleAll!<CR>
+noremap <Leader>mo :MBEOpenAll!<CR>
+noremap <Leader>mc :MBECloseAll!<CR>
+"google格式化
+let g:clang_format#auto_format_on_insert_leave=1    "退出插入模式时自动格式化
